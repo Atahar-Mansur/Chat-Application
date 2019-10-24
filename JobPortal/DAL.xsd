@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DAL" targetNamespace="http://tempuri.org/DAL.xsd" xmlns:mstns="http://tempuri.org/DAL.xsd" xmlns="http://tempuri.org/DAL.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PersonalTableAdapter" GeneratorDataComponentClassName="PersonalTableAdapter" Name="DataTable1" UserDataComponentName="PersonalTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectType="Unknown" GenerateMethods="Get" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="GetData">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT TOP (1000) [intID]
+      ,[strFirstName]
+      ,[strLastName]
+      ,[strFatherName]
+      ,[strMatherName]
+      ,[dteDateOfBirth]
+      ,[strGender]
+      ,[strReligion]
+      ,[strMeritalStutas]
+      ,[strNational]
+      ,[strNID]
+      ,[strPassportNo]
+      ,[dtePassportIssueDate]
+      ,[strMobile1]
+      ,[strMobile2]
+      ,[strMobile3]
+      ,[strMainEmail]
+      ,[strAltEmail]
+      ,[strPresentAddress]
+      ,[strParmanentAddress]
+      ,[strObjective]
+      ,[strParmanentAddress2]
+      ,[floatPresentSalary]
+      ,[floatExpectedSalary]
+      ,[strJobLavel]
+      ,[strJobNature]
+      ,[strCareerSummary]
+      ,[strSpecialQualification]
+      ,[strKeywords]
+      ,[imgImage]
+  FROM [DBJobPortal].[dbo].[Personal]</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="intID" DataSetColumn="intID" />
+              <Mapping SourceColumn="strFirstName" DataSetColumn="strFirstName" />
+              <Mapping SourceColumn="strLastName" DataSetColumn="strLastName" />
+              <Mapping SourceColumn="strFatherName" DataSetColumn="strFatherName" />
+              <Mapping SourceColumn="strMatherName" DataSetColumn="strMatherName" />
+              <Mapping SourceColumn="dteDateOfBirth" DataSetColumn="dteDateOfBirth" />
+              <Mapping SourceColumn="strGender" DataSetColumn="strGender" />
+              <Mapping SourceColumn="strReligion" DataSetColumn="strReligion" />
+              <Mapping SourceColumn="strMeritalStutas" DataSetColumn="strMeritalStutas" />
+              <Mapping SourceColumn="strNational" DataSetColumn="strNational" />
+              <Mapping SourceColumn="strNID" DataSetColumn="strNID" />
+              <Mapping SourceColumn="strPassportNo" DataSetColumn="strPassportNo" />
+              <Mapping SourceColumn="dtePassportIssueDate" DataSetColumn="dtePassportIssueDate" />
+              <Mapping SourceColumn="strMobile1" DataSetColumn="strMobile1" />
+              <Mapping SourceColumn="strMobile2" DataSetColumn="strMobile2" />
+              <Mapping SourceColumn="strMobile3" DataSetColumn="strMobile3" />
+              <Mapping SourceColumn="strMainEmail" DataSetColumn="strMainEmail" />
+              <Mapping SourceColumn="strAltEmail" DataSetColumn="strAltEmail" />
+              <Mapping SourceColumn="strPresentAddress" DataSetColumn="strPresentAddress" />
+              <Mapping SourceColumn="strParmanentAddress" DataSetColumn="strParmanentAddress" />
+              <Mapping SourceColumn="strObjective" DataSetColumn="strObjective" />
+              <Mapping SourceColumn="strParmanentAddress2" DataSetColumn="strParmanentAddress2" />
+              <Mapping SourceColumn="floatPresentSalary" DataSetColumn="floatPresentSalary" />
+              <Mapping SourceColumn="floatExpectedSalary" DataSetColumn="floatExpectedSalary" />
+              <Mapping SourceColumn="strJobLavel" DataSetColumn="strJobLavel" />
+              <Mapping SourceColumn="strJobNature" DataSetColumn="strJobNature" />
+              <Mapping SourceColumn="strCareerSummary" DataSetColumn="strCareerSummary" />
+              <Mapping SourceColumn="strSpecialQualification" DataSetColumn="strSpecialQualification" />
+              <Mapping SourceColumn="strKeywords" DataSetColumn="strKeywords" />
+              <Mapping SourceColumn="imgImage" DataSetColumn="imgImage" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Personal1TableAdapter" GeneratorDataComponentClassName="Personal1TableAdapter" Name="DataTable2" UserDataComponentName="Personal1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectType="Unknown" GenerateMethods="Get" GenerateShortCommands="false" GeneratorGetMethodName="Update1" GetMethodModifier="Public" GetMethodName="Update1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="Update1" UserSourceName="Update1">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE [DBJobPortal].[dbo].[Personal] 
+SET [strFirstName] = @strFirstName, 
+[strLastName] = @strLastName, 
+[strFatherName] = @strFatherName,
+ [strMatherName] = @strMatherName, 
+[dteDateOfBirth] = @dteDateOfBirth,
+ [strGender] = @strGender,
+ [strReligion] = @strReligion,
+ [strMeritalStutas] = @strMeritalStutas,
+ [strNational] = @strNational,
+ [strNID] = @strNID,
+ [strPassportNo] = @strPassportNo, 
+[dtePassportIssueDate] = @dtePassportIssueDate, 
+[strMobile1] = @strMobile1,
+ [strMobile2] = @strMobile2,
+ [strMobile3] = @strMobile3,
+ [strMainEmail] = @strMainEmail,
+ [strAltEmail] = @strAltEmail, 
+[strPresentAddress] = @strPresentAddress, 
+[strParmanentAddress] = @strParmanentAddress,
+ [strObjective] = @strObjective, 
+[strParmanentAddress2] = @strParmanentAddress2,
+ [floatPresentSalary] = @floatPresentSalary, 
+[floatExpectedSalary] = @floatExpectedSalary, 
+[strJobLavel] = @strJobLavel,
+ [strJobNature] = @strJobNature, 
+[strCareerSummary] = @strCareerSummary,
+ [strSpecialQualification] = @strSpecialQualification,
+ [strKeywords] = @strKeywords,
+ [imgImage] = @imgImage 
+WHERE (([intID] = @Original_intID))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="strFirstName" ColumnName="strFirstName" DataSourceName="DBJobPortal.dbo.Personal" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@strFirstName" Precision="0" Scale="0" Size="50" SourceColumn="strFirstName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="strLastName" ColumnName="strLastName" DataSourceName="DBJobPortal.dbo.Personal" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@strLastName" Precision="0" Scale="0" Size="50" SourceColumn="strLastName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="strFatherName" ColumnName="strFatherName" DataSourceName="DBJobPortal.dbo.Personal" DataTypeServer="varchar(100)" DbType="AnsiString" Direction="Input" ParameterName="@strFatherName" Precision="0" Scale="0" Size="100" SourceColumn="strFatherName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="strMatherName" ColumnName="strMatherName" DataSourceName="DBJobPortal.dbo.Personal" DataTypeServer="varchar(100)" DbType="AnsiString" Direction="Input" ParameterName="@strMatherName" Precision="0" Scale="0" Size="100" SourceColumn="strMatherName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="dteDateOfBirth" ColumnName="dteDateOfBirth" DataSourceName="DBJobPortal.dbo.Personal" DataTypeServer="date" DbType="AnsiString" Direction="Input" ParameterName="@dteDateOfBirth" Precision="0" Scale="0" Size="3" SourceColumn="dteDateOfBirth" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="strGender" ColumnName="strGender" DataSourceName="DBJobPortal.dbo.Personal" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@strGender" Precision="0" Scale="0" Size="50" SourceColumn="strGender" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="strReligion" ColumnName="strReligion" DataSourceName="DBJobPortal.dbo.Personal" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@strReligion" Precision="0" Scale="0" Size="50" SourceColumn="strReligion" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="strMeritalStutas" ColumnName="strMeritalStutas" DataSourceName="DBJobPortal.dbo.Personal" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@strMeritalStutas" Precision="0" Scale="0" Size="50" SourceColumn="strMeritalStutas" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="strNational" ColumnName="strNational" DataSourceName="DBJobPortal.dbo.Personal" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@strNational" Precision="0" Scale="0" Size="50" SourceColumn="strNational" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="strNID" ColumnName="strNID" DataSourceName="DBJobPortal.dbo.Personal" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@strNID" Precision="0" Scale="0" Size="50" SourceColumn="strNID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="strPassportNo" ColumnName="strPassportNo" DataSourceName="DBJobPortal.dbo.Personal" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@strPassportNo" Precision="0" Scale="0" Size="50" SourceColumn="strPassportNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="dtePassportIssueDate" ColumnName="dtePassportIssueDate" DataSourceName="DBJobPortal.dbo.Personal" DataTypeServer="date" DbType="AnsiString" Direction="Input" ParameterName="@dtePassportIssueDate" Precision="0" Scale="0" Size="3" SourceColumn="dtePassportIssueDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="strMobile1" ColumnName="strMobile1" DataSourceName="DBJobPortal.dbo.Personal" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@strMobile1" Precision="0" Scale="0" Size="50" SourceColumn="strMobile1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="strMobile2" ColumnName="strMobile2" DataSourceName="DBJobPortal.dbo.Personal" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@strMobile2" Precision="0" Scale="0" Size="50" SourceColumn="strMobile2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="strMobile3" ColumnName="strMobile3" DataSourceName="DBJobPortal.dbo.Personal" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@strMobile3" Precision="0" Scale="0" Size="50" SourceColumn="strMobile3" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="strMainEmail" ColumnName="strMainEmail" DataSourceName="DBJobPortal.dbo.Personal" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@strMainEmail" Precision="0" Scale="0" Size="50" SourceColumn="strMainEmail" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="strAltEmail" ColumnName="strAltEmail" DataSourceName="DBJobPortal.dbo.Personal" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@strAltEmail" Precision="0" Scale="0" Size="50" SourceColumn="strAltEmail" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="strPresentAddress" ColumnName="strPresentAddress" DataSourceName="DBJobPortal.dbo.Personal" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@strPresentAddress" Precision="0" Scale="0" Size="50" SourceColumn="strPresentAddress" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="strParmanentAddress" ColumnName="strParmanentAddress" DataSourceName="DBJobPortal.dbo.Personal" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@strParmanentAddress" Precision="0" Scale="0" Size="50" SourceColumn="strParmanentAddress" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="strObjective" ColumnName="strObjective" DataSourceName="DBJobPortal.dbo.Personal" DataTypeServer="varchar(300)" DbType="AnsiString" Direction="Input" ParameterName="@strObjective" Precision="0" Scale="0" Size="300" SourceColumn="strObjective" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="strParmanentAddress2" ColumnName="strParmanentAddress2" DataSourceName="DBJobPortal.dbo.Personal" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@strParmanentAddress2" Precision="0" Scale="0" Size="50" SourceColumn="strParmanentAddress2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="floatPresentSalary" ColumnName="floatPresentSalary" DataSourceName="DBJobPortal.dbo.Personal" DataTypeServer="numeric(18, 4)" DbType="Decimal" Direction="Input" ParameterName="@floatPresentSalary" Precision="18" Scale="4" Size="9" SourceColumn="floatPresentSalary" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="floatExpectedSalary" ColumnName="floatExpectedSalary" DataSourceName="DBJobPortal.dbo.Personal" DataTypeServer="numeric(18, 4)" DbType="Decimal" Direction="Input" ParameterName="@floatExpectedSalary" Precision="18" Scale="4" Size="9" SourceColumn="floatExpectedSalary" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="strJobLavel" ColumnName="strJobLavel" DataSourceName="DBJobPortal.dbo.Personal" DataTypeServer="varchar(250)" DbType="AnsiString" Direction="Input" ParameterName="@strJobLavel" Precision="0" Scale="0" Size="250" SourceColumn="strJobLavel" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="strJobNature" ColumnName="strJobNature" DataSourceName="DBJobPortal.dbo.Personal" DataTypeServer="varchar(250)" DbType="AnsiString" Direction="Input" ParameterName="@strJobNature" Precision="0" Scale="0" Size="250" SourceColumn="strJobNature" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="strCareerSummary" ColumnName="strCareerSummary" DataSourceName="DBJobPortal.dbo.Personal" DataTypeServer="varchar(300)" DbType="AnsiString" Direction="Input" ParameterName="@strCareerSummary" Precision="0" Scale="0" Size="300" SourceColumn="strCareerSummary" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="strSpecialQualification" ColumnName="strSpecialQualification" DataSourceName="DBJobPortal.dbo.Personal" DataTypeServer="varchar(100)" DbType="AnsiString" Direction="Input" ParameterName="@strSpecialQualification" Precision="0" Scale="0" Size="100" SourceColumn="strSpecialQualification" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="strKeywords" ColumnName="strKeywords" DataSourceName="DBJobPortal.dbo.Personal" DataTypeServer="varchar(250)" DbType="AnsiString" Direction="Input" ParameterName="@strKeywords" Precision="0" Scale="0" Size="250" SourceColumn="strKeywords" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="imgImage" ColumnName="imgImage" DataSourceName="DBJobPortal.dbo.Personal" DataTypeServer="image" DbType="Binary" Direction="Input" ParameterName="@imgImage" Precision="0" Scale="0" Size="2147483647" SourceColumn="imgImage" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_intID" ColumnName="intID" DataSourceName="DBJobPortal.dbo.Personal" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Original_intID" Precision="0" Scale="0" Size="4" SourceColumn="intID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DAL" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DAL" msprop:Generator_UserDSName="DAL">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="intID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnintID" msprop:Generator_ColumnPropNameInRow="intID" msprop:Generator_ColumnPropNameInTable="intIDColumn" msprop:Generator_UserColumnName="intID" type="xs:int" />
+              <xs:element name="strFirstName" msprop:Generator_ColumnVarNameInTable="columnstrFirstName" msprop:Generator_ColumnPropNameInRow="strFirstName" msprop:Generator_ColumnPropNameInTable="strFirstNameColumn" msprop:Generator_UserColumnName="strFirstName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="strLastName" msprop:Generator_ColumnVarNameInTable="columnstrLastName" msprop:Generator_ColumnPropNameInRow="strLastName" msprop:Generator_ColumnPropNameInTable="strLastNameColumn" msprop:Generator_UserColumnName="strLastName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="strFatherName" msprop:Generator_ColumnVarNameInTable="columnstrFatherName" msprop:Generator_ColumnPropNameInRow="strFatherName" msprop:Generator_ColumnPropNameInTable="strFatherNameColumn" msprop:Generator_UserColumnName="strFatherName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="strMatherName" msprop:Generator_ColumnVarNameInTable="columnstrMatherName" msprop:Generator_ColumnPropNameInRow="strMatherName" msprop:Generator_ColumnPropNameInTable="strMatherNameColumn" msprop:Generator_UserColumnName="strMatherName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="dteDateOfBirth" msprop:Generator_ColumnVarNameInTable="columndteDateOfBirth" msprop:Generator_ColumnPropNameInRow="dteDateOfBirth" msprop:Generator_ColumnPropNameInTable="dteDateOfBirthColumn" msprop:Generator_UserColumnName="dteDateOfBirth" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="strGender" msprop:Generator_ColumnVarNameInTable="columnstrGender" msprop:Generator_ColumnPropNameInRow="strGender" msprop:Generator_ColumnPropNameInTable="strGenderColumn" msprop:Generator_UserColumnName="strGender" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="strReligion" msprop:Generator_ColumnVarNameInTable="columnstrReligion" msprop:Generator_ColumnPropNameInRow="strReligion" msprop:Generator_ColumnPropNameInTable="strReligionColumn" msprop:Generator_UserColumnName="strReligion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="strMeritalStutas" msprop:Generator_ColumnVarNameInTable="columnstrMeritalStutas" msprop:Generator_ColumnPropNameInRow="strMeritalStutas" msprop:Generator_ColumnPropNameInTable="strMeritalStutasColumn" msprop:Generator_UserColumnName="strMeritalStutas" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="strNational" msprop:Generator_ColumnVarNameInTable="columnstrNational" msprop:Generator_ColumnPropNameInRow="strNational" msprop:Generator_ColumnPropNameInTable="strNationalColumn" msprop:Generator_UserColumnName="strNational" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="strNID" msprop:Generator_ColumnVarNameInTable="columnstrNID" msprop:Generator_ColumnPropNameInRow="strNID" msprop:Generator_ColumnPropNameInTable="strNIDColumn" msprop:Generator_UserColumnName="strNID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="strPassportNo" msprop:Generator_ColumnVarNameInTable="columnstrPassportNo" msprop:Generator_ColumnPropNameInRow="strPassportNo" msprop:Generator_ColumnPropNameInTable="strPassportNoColumn" msprop:Generator_UserColumnName="strPassportNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="dtePassportIssueDate" msprop:Generator_ColumnVarNameInTable="columndtePassportIssueDate" msprop:Generator_ColumnPropNameInRow="dtePassportIssueDate" msprop:Generator_ColumnPropNameInTable="dtePassportIssueDateColumn" msprop:Generator_UserColumnName="dtePassportIssueDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="strMobile1" msprop:Generator_ColumnVarNameInTable="columnstrMobile1" msprop:Generator_ColumnPropNameInRow="strMobile1" msprop:Generator_ColumnPropNameInTable="strMobile1Column" msprop:Generator_UserColumnName="strMobile1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="strMobile2" msprop:Generator_ColumnVarNameInTable="columnstrMobile2" msprop:Generator_ColumnPropNameInRow="strMobile2" msprop:Generator_ColumnPropNameInTable="strMobile2Column" msprop:Generator_UserColumnName="strMobile2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="strMobile3" msprop:Generator_ColumnVarNameInTable="columnstrMobile3" msprop:Generator_ColumnPropNameInRow="strMobile3" msprop:Generator_ColumnPropNameInTable="strMobile3Column" msprop:Generator_UserColumnName="strMobile3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="strMainEmail" msprop:Generator_ColumnVarNameInTable="columnstrMainEmail" msprop:Generator_ColumnPropNameInRow="strMainEmail" msprop:Generator_ColumnPropNameInTable="strMainEmailColumn" msprop:Generator_UserColumnName="strMainEmail" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="strAltEmail" msprop:Generator_ColumnVarNameInTable="columnstrAltEmail" msprop:Generator_ColumnPropNameInRow="strAltEmail" msprop:Generator_ColumnPropNameInTable="strAltEmailColumn" msprop:Generator_UserColumnName="strAltEmail" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="strPresentAddress" msprop:Generator_ColumnVarNameInTable="columnstrPresentAddress" msprop:Generator_ColumnPropNameInRow="strPresentAddress" msprop:Generator_ColumnPropNameInTable="strPresentAddressColumn" msprop:Generator_UserColumnName="strPresentAddress" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="strParmanentAddress" msprop:Generator_ColumnVarNameInTable="columnstrParmanentAddress" msprop:Generator_ColumnPropNameInRow="strParmanentAddress" msprop:Generator_ColumnPropNameInTable="strParmanentAddressColumn" msprop:Generator_UserColumnName="strParmanentAddress" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="strObjective" msprop:Generator_ColumnVarNameInTable="columnstrObjective" msprop:Generator_ColumnPropNameInRow="strObjective" msprop:Generator_ColumnPropNameInTable="strObjectiveColumn" msprop:Generator_UserColumnName="strObjective" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="strParmanentAddress2" msprop:Generator_ColumnVarNameInTable="columnstrParmanentAddress2" msprop:Generator_ColumnPropNameInRow="strParmanentAddress2" msprop:Generator_ColumnPropNameInTable="strParmanentAddress2Column" msprop:Generator_UserColumnName="strParmanentAddress2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="floatPresentSalary" msprop:Generator_ColumnVarNameInTable="columnfloatPresentSalary" msprop:Generator_ColumnPropNameInRow="floatPresentSalary" msprop:Generator_ColumnPropNameInTable="floatPresentSalaryColumn" msprop:Generator_UserColumnName="floatPresentSalary" type="xs:decimal" minOccurs="0" />
+              <xs:element name="floatExpectedSalary" msprop:Generator_ColumnVarNameInTable="columnfloatExpectedSalary" msprop:Generator_ColumnPropNameInRow="floatExpectedSalary" msprop:Generator_ColumnPropNameInTable="floatExpectedSalaryColumn" msprop:Generator_UserColumnName="floatExpectedSalary" type="xs:decimal" minOccurs="0" />
+              <xs:element name="strJobLavel" msprop:Generator_ColumnVarNameInTable="columnstrJobLavel" msprop:Generator_ColumnPropNameInRow="strJobLavel" msprop:Generator_ColumnPropNameInTable="strJobLavelColumn" msprop:Generator_UserColumnName="strJobLavel" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="strJobNature" msprop:Generator_ColumnVarNameInTable="columnstrJobNature" msprop:Generator_ColumnPropNameInRow="strJobNature" msprop:Generator_ColumnPropNameInTable="strJobNatureColumn" msprop:Generator_UserColumnName="strJobNature" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="strCareerSummary" msprop:Generator_ColumnVarNameInTable="columnstrCareerSummary" msprop:Generator_ColumnPropNameInRow="strCareerSummary" msprop:Generator_ColumnPropNameInTable="strCareerSummaryColumn" msprop:Generator_UserColumnName="strCareerSummary" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="strSpecialQualification" msprop:Generator_ColumnVarNameInTable="columnstrSpecialQualification" msprop:Generator_ColumnPropNameInRow="strSpecialQualification" msprop:Generator_ColumnPropNameInTable="strSpecialQualificationColumn" msprop:Generator_UserColumnName="strSpecialQualification" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="strKeywords" msprop:Generator_ColumnVarNameInTable="columnstrKeywords" msprop:Generator_ColumnPropNameInRow="strKeywords" msprop:Generator_ColumnPropNameInTable="strKeywordsColumn" msprop:Generator_UserColumnName="strKeywords" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="imgImage" msprop:Generator_ColumnVarNameInTable="columnimgImage" msprop:Generator_ColumnPropNameInRow="imgImage" msprop:Generator_ColumnPropNameInTable="imgImageColumn" msprop:Generator_UserColumnName="imgImage" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DataTable2" msprop:Generator_TableClassName="DataTable2DataTable" msprop:Generator_TableVarName="tableDataTable2" msprop:Generator_TablePropName="DataTable2" msprop:Generator_RowDeletingName="DataTable2RowDeleting" msprop:Generator_RowChangingName="DataTable2RowChanging" msprop:Generator_RowEvHandlerName="DataTable2RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable2RowDeleted" msprop:Generator_UserTableName="DataTable2" msprop:Generator_RowChangedName="DataTable2RowChanged" msprop:Generator_RowEvArgName="DataTable2RowChangeEvent" msprop:Generator_RowClassName="DataTable2Row">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DataTable1" />
+      <xs:field xpath="mstns:intID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

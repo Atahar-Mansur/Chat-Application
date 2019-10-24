@@ -1,0 +1,1042 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="JobPortal.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - My ASP.NET Application</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <style>
+        
+        .containerColor{
+            background-color: white;
+            color: black;
+        }
+
+        .photobody {
+            padding-top: 70px;
+        }
+
+        .imageupload {  
+            margin: 20px 0;
+        }
+        .bodyResize{
+            width: 100%;
+        }
+
+        
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="Scripts/jquery-3.3.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+
+
+  <%--  <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - My ASP.NET Application</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />--%>
+
+</head>
+<body class="bg-secondary text-dark ">
+    <form runat ="server">
+
+         <div class="row text-dark">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8 bg-light mt-3 bodyResize">
+                <div class=" mt-5 bg-light">
+                    <nav class="border border-dark" >
+                        <div class="nav nav-tabsm p-2" id="nav-tab" role="tablist">
+                            <a class="nav-item nav-link active px-4" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true"><i class="fas fa-circle fa-2x"></i>Personal</a>
+                            <a class="nav-item nav-link px-4" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false"><i class="fas fa-circle fa-2x"></i>Education/Training</a>
+                            <a class="nav-item nav-link px-4" id="nav-employment-tab" data-toggle="tab" href="#nav-employment" role="tab" aria-controls="nav-employment" aria-selected="false"><i class="fas fa-circle fa-2x"></i>Employment</a>
+                            <a class="nav-item nav-link px-4" id="nav-contacts-tab" data-toggle="tab-pill" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false"><i class="fas fa-circle fa-2x"></i>Other informaiton</a>
+                            <a class="nav-item nav-link px-4" id="nav-photograph-tab" data-toggle="tab" href="#nav-photograph" role="tab" aria-controls="nav-photograph" aria-selected="false"><i class="fas fa-circle fa-2x"></i>Photograph</a>
+                        </div>
+                    </nav>
+                    <div class="tab-content" id="nav-tabContent">
+
+                        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                            <div id="accordion">
+
+                                <%-----------------Personal Details---------------------%>
+                                <div class="card m-3">
+                                    <div class="card-header" id="headingOne">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                Personal Details
+                                            </button>
+                                        </h5>
+                                    </div>                                    
+                                    <div id="collapseOne" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+                                        <div class="card-body">
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for=" validationServer01">First Name</label>                                                       
+                                                         <asp:TextBox ID="txtFirstName" runat="server"  ReadOnly="True" Width="300px"  class="form-control  is-valid" required></asp:TextBox>                                                        
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="validationServer01 is-valid">Nationality</label>                                                       
+                                                        <asp:TextBox ID="txtNationality" runat="server"  ReadOnly="True" Width="300px" class="form-control  is-valid" required></asp:TextBox>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="validationServer01">Last Name</label>
+                                                        <asp:TextBox ID="txtLastName" runat="server"  ReadOnly="True" Width="300px" class ="form-control " ></asp:TextBox>                                                                                                            
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="validationServer01">National Id No</label>
+                                                         <asp:TextBox ID="txtNID" runat="server"  ReadOnly="True" Width="300px" class="form-control is-valid" required></asp:TextBox>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="validationServer01">Father's Name</label>
+                                                         <asp:TextBox ID="txtFatherName" runat="server"  ReadOnly="True" Width="300px" class="form-control is-valid" required></asp:TextBox>
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="validationServer01">Pasport No</label>
+                                                         <asp:TextBox ID="txtPassportNo" runat="server"  ReadOnly="True" Width="300px" class="form-control is-valid"  required></asp:TextBox>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="validationServer01">Mather's Name</label>
+                                                         <asp:TextBox ID="txtMatherName" runat="server"  ReadOnly="True" Width="300px" class="form-control is-valid" required></asp:TextBox>                                                        
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="validationServer01">Pasport Issue Date</label>
+                                                        <asp:TextBox ID="dtePassportIssuDate" runat="server"  ReadOnly="True" Width="300px" TextMode="Date" class="form-control is-valid"></asp:TextBox>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="validationServer01">Date of Birth</label>
+                                                       <asp:TextBox ID="dteDOB" runat="server" TextMode="Date"  ReadOnly="True" Width="300px" class="form-control is-valid" required></asp:TextBox>
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="validationServer01">Mobile No 1</label>
+                                                        <asp:TextBox ID="txtMobile1" runat="server"  ReadOnly="True" Width="300px" class="form-control is-valid" required></asp:TextBox>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="validationServer01">Gender</label>
+                                                        <%-- <input type="dropdown" class="form-control is-valid" id="validationServer01" placeholder="Male/Female" required>--%>
+                                                         <asp:TextBox ID="txtGender" runat="server"  ReadOnly="True" Width="300px" class="form-control "></asp:TextBox>
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="validationServer01">Mobile No 2</label>
+                                                         <asp:TextBox ID="txtMobile2" runat="server"  ReadOnly="True" Width="300px" class="form-control "></asp:TextBox>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="validationServer01">Religion</label>
+                                                         <asp:TextBox ID="txtReligion" runat="server"  ReadOnly="True" Width="300px" class="form-control is-valid" required></asp:TextBox>
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="validationServer01">Mobile No 3</label>
+                                                        <asp:TextBox ID="txtMobile3" runat="server"  ReadOnly="True" Width="300px" class="form-control "></asp:TextBox>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="validationServer01">Marital Status</label>
+                                                        <%-- <input type="Dropdown" class="form-control is-valid" id="validationServer01" placeholder="Married" required>--%>
+                                                        <asp:TextBox ID="txtMaritalStatus" runat="server"  ReadOnly="True" Width="300px" class="form-control "></asp:TextBox>
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="validationServer01">Email</label>
+                                                         <asp:TextBox ID="txtMainEmail" runat="server"  ReadOnly="True" Width="300px" class="form-control is-valid" required></asp:TextBox>                                                        
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="validationServer01"></label>
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="validationServer01 is-valid">Alternate Email</label>
+                                                         <asp:TextBox ID="txtAltEmail" runat="server"  ReadOnly="True" Width="300px" class="form-control " ></asp:TextBox>
+                                                    </div>
+                                                </div>
+                                            
+                                                <asp:Button ID="btnEdit" runat="server"  Text="Edit" CausesValidation="False" OnClick="btnEdit_Click"/>
+                                                <asp:Button ID="btnUpdate" runat="server" Text="Update"  Visible="False" OnClick="btnUpdate_Click" />                    
+                                        </div>
+                                    </div>
+                                </div>
+
+                               <%-- ---------Address Details-----------%>
+                                <div class="card m-3">
+                                    <div class="card-header" id="headingTwo">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                Address Details</button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                        <div class="card-body">
+                                            
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="validationServer01">Present Address</label>
+                                                         <asp:TextBox ID="txtPresentAddress" runat="server"  ReadOnly="True" TextMode="MultiLine" Width="300px" class="form-control is-valid" ></asp:TextBox>
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="validationServer01">Permanent Address</label>
+                                                         <asp:TextBox ID="txtParmanentAddress" runat="server" TextMode="MultiLine" Width="300px" class="form-control is-valid" required></asp:TextBox>
+                                                    </div>
+                                                </div>
+                                                <button type="submit" id="btnUpdate" class="btn btn-secondary">EDIT</button>
+                                                <%-- <asp:Button ID="btnUpdate" runat="server" Text="Update"  Visible="False" OnClick="btnUpdate_Click" /> --%>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <%-----------Career and Application Information-----------%>
+                                <div class="card m-3">
+                                    <div class="card-header" id="headingThree">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                Career And Application informaiton
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                        <div class="card-body">
+                                            
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="validationServer01">Objective</label>
+                                                         <asp:TextBox ID="txtObjective" runat="server" Width="300px" ReadOnly="True" class="form-control"></asp:TextBox>
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="validationServer01">Permanent Address</label>
+                                                        <asp:TextBox ID="txtParmanentAddress2" runat="server" Width="300px" ReadOnly="True" class="form-control"></asp:TextBox>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="validationServer01">Present Salary</label>
+                                                        <asp:TextBox ID="txtPresentSalary" runat="server" ReadOnly="True" Width="300px"  class="form-control"></asp:TextBox>
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="validationServer01">Expected Salary</label>
+                                                        <asp:TextBox ID="txtExpectedSalary" runat="server" Width="300px" ReadOnly="True" class="form-control"></asp:TextBox>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="validationServer01">Looking For(Job Level)</label>
+                                                        <asp:TextBox ID="txtJobLevel" runat="server" Width="300px" ReadOnly="True" class="form-control"></asp:TextBox>
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="validationServer01">Available For(Job Nature)</label>
+                                                        <asp:TextBox ID="txtJobNature" runat="server" Width="300px" ReadOnly="True" class="form-control" ></asp:TextBox>
+                                                    </div>
+                                                </div>
+                                                <button type="submit" class="btn btn-secondary">EDIT</button>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                                <%-----------Preferred Areas-----------%>
+                                <div class="card m-3">
+                                    <div class="card-header" id="headingThree">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                                                Preferred Areas
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseFour" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                        <div class="card-body">
+                                           
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="validationServer01">Preferred Job Catagorices Functional</label>
+                                                        <div class="">
+                                                            <div class="btn-group dropright">
+                                                                <button type="button" class="btn btn-secondary dropdown-toggle form-control is-valid" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" required>
+                                                                    Job Catagorices
+                                                                </button>
+                                                                <div class="dropdown-menu">
+                                                                    <!-- Dropdown menu links -->
+                                                                    <a class="dropdown-item" href="#">IT/Telecommunication</a>
+                                                                    <a class="dropdown-item" href="#">Food & Bevarage</a>
+                                                                    <a class="dropdown-item" href="#">HR Department </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="validationServer01">Special Skills</label>
+                                                        <textarea id="form10" class="md-textarea form-control is-valid" rows="2"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="validationServer01">Preferred Job Location</label>
+                                                        <div class="">
+                                                            <div class="btn-group dropright ">
+                                                                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    Inside Bangladesh
+                                                                </button>
+                                                                <div class="dropdown-menu">
+                                                                    <!-- Dropdown menu links -->
+                                                                    <a class="dropdown-item" href="#">Inside Bangladesh</a>
+                                                                    <a class="dropdown-item" href="#">Outsite Bangladesh</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button type="submit" class="btn btn-secondary">EDIT</button>
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <%-----------Other Relevant Information -----------%>
+                                <div class="card m-3">
+                                    <div class="card-header" id="headingThree">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseLast" aria-expanded="false" aria-controls="collapseThree">
+                                                Other Relevent informaiton
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseLast" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <label for="validationServer01">Career Summary</label>
+                                                    <asp:TextBox ID="txtCareerSummary" runat="server" ReadOnly="True" TextMode="MultiLine" class="form-control"></asp:TextBox>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <label for="validationServer01">Special Qualification</label>
+                                                    <asp:TextBox ID="txtSpecialQualification" runat="server" ReadOnly="True" TextMode="MultiLine" class="form-control"></asp:TextBox>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <label for="validationServer01">Keywords</label>
+                                                    <asp:TextBox ID="txtKeywords" runat="server" ReadOnly="True" TextMode="MultiLine" class=" form-control"></asp:TextBox>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                            <div id="accordion">
+                                <div class="card m-3">
+                                    <div class="card-header" id="headingOne">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                Academic Summary
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseOne" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <div class="col-md-12">
+                                             
+                                                    <div class="form-row">
+                                                        <div class="form-group col-md-6 mt-3">
+                                                            <h4>Academic 1</h4>
+                                                            <label for=" validationServer01">Label Of Education</label><br />
+                                                            <asp:TextBox ID="strLevelofEducation" runat="server" ReadOnly="True" Visible="True" CssClass="form-control"></asp:TextBox>
+                                                            <asp:DropDownList ID="strDrpLevelofEducation" runat="server" Visible="False" CssClass="form-control">
+                                                            <asp:ListItem>Secondery School Certificate(SSC)</asp:ListItem>
+                                                            <asp:ListItem>Higher Secondery Certificate(HSC)</asp:ListItem>
+                                                            <asp:ListItem>Bachelor/Honors/Professional</asp:ListItem>
+                                                            <asp:ListItem>Master</asp:ListItem>
+                                                            <asp:ListItem>PhD</asp:ListItem>
+                                                            </asp:DropDownList><br />
+                                                        </div>
+                                                        <div class="form-group col-md-6 mt-5 ">
+                                                            <label for="validationServer01 is-valid">Result</label><br />
+                                                            <asp:TextBox ID="strResult" runat="server" ReadOnly="True" CssClass="form-control"></asp:TextBox><br />
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-row">
+                                                        <div class="form-group col-md-6">
+                                                            <label for="validationServer01">Exam/Degree</label><br />
+                                                            <asp:TextBox ID="strExamDegreeTitle" runat="server" ReadOnly="True" CssClass="form-control"></asp:TextBox>
+                                                            <asp:DropDownList ID="strDrpExamDegreeTitle" runat="server" Visible="False" CssClass="form-control">
+                                                            <asp:ListItem>Science</asp:ListItem>
+                                                            <asp:ListItem>BSc</asp:ListItem>
+                                                            <asp:ListItem>BCom</asp:ListItem>
+                                                            <asp:ListItem>BA</asp:ListItem>
+                                                            <asp:ListItem>MSc</asp:ListItem>
+                                                            </asp:DropDownList><br />
+                                                        </div>
+                                                        <div class="form-group col-md-6">
+                                                            <label for="validationServer01">Year of Passing</label><br />
+                                                            <asp:TextBox ID="strYearofPassing" runat="server" ReadOnly="True" CssClass="form-control" requiredsa></asp:TextBox><br />
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-row">
+                                                        <div class="form-group col-md-6">
+                                                            <label for="validationServer01">Concentration/Mejor/Group</label><br />
+                                                            <asp:TextBox ID="strConcentrationMajorGroup" runat="server" ReadOnly="True" CssClass="form-control"></asp:TextBox><br />
+                                                        </div>
+                                                        <div class="form-group col-md-6">
+                                                            <label for="validationServer01">Duration</label><br />
+                                                            <asp:TextBox ID="strDuration" runat="server" ReadOnly="True" CssClass="form-control"></asp:TextBox><br />
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-row">
+                                                        <div class="form-group col-md-6">
+                                                            <label for="validationServer01">Institute Name</label><br />
+                                                            <asp:TextBox ID="strInstituteName" runat="server" ReadOnly="True" CssClass="form-control"></asp:TextBox><br />
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-row">
+                                                        <div class="form-group col-md-6">
+                                                            <label for="validationServer01">Achievement</label><br />
+                                                            <asp:TextBox ID="strAchievement" runat="server" cols="20" rows="3" TextMode="MultiLine" ReadOnly="True"  CssClass="form-control"></asp:TextBox><br />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="">
+                                                        <span>
+                                                            <asp:Button ID="btnAddAS" runat="server" Text="Add" Visible="False" OnClick="btnAddAS_Click"/><br />
+                                                            <asp:Label ID="lblValidationMsg" runat="server" Text=""></asp:Label><br /><br />
+                                                            <asp:Button ID="btnEditAS" runat="server" Text="Edit" OnClick="btnEditAS_Click"/>
+                                                            <asp:Button ID="btnSaveAS" runat="server" Text="Save" Visible="False" />
+                                                            <asp:Button ID="btnDeleteAS" runat="server" Text="Delete" />
+                                                        </span>
+                                                    </div>
+                                               
+                                                    <%--<div class="form-row">
+                                                        <div class="form-group col-md-6 mt-3">
+                                                            <h4>Academic 2</h4>
+                                                            <label for=" validationServer01">Label Of Education</label>
+                                                            <div class="dropdown is-valid">
+                                                                <button class="btn  dropdown-toggle btn-outline-secondary w-100 is-valid" type="button" id="dropdownMenu2 validationServer01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    Bachelor/Honors
+                                                                </button>
+                                                                <div class="dropdown-menu is-valid" aria-labelledby="dropdownMenu2">
+                                                                    <button class="dropdown-item" type="button">Secondery</button>
+                                                                    <button class="dropdown-item" type="button">Higher Secondary</button>
+                                                                    <button class="dropdown-item" type="button">Diploam</button>
+                                                                    <button class="dropdown-item" type="button">Bachelor/Honors </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group col-md-6 mt-5 ">
+                                                            <label for="validationServer01 is-valid">Result</label>
+                                                            <div class="dropdown is-valid">
+                                                                <button class="btn dropdown-toggle btn-outline-secondary is-valid" type="button" id="dropdownMenu2 validationServer01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    Select
+                                                                </button>
+                                                                <div class="dropdown-menu is-valid" aria-labelledby="dropdownMenu2">
+                                                                    <button class="dropdown-item" type="button">First Division</button>
+                                                                    <button class="dropdown-item" type="button">Second Division</button>
+                                                                    <button class="dropdown-item" type="button">Third Division</button>
+                                                                    <button class="dropdown-item" type="button">Greade </button>
+                                                                    <button class="dropdown-item" type="button">Appeared </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-row">
+                                                        <div class="form-group col-md-6">
+                                                            <label for="validationServer01">Exam/Degree</label>
+                                                            <div class="dropdown is-valid">
+                                                                <button class="btn dropdown-toggle btn-outline-secondary w-100 is-valid" type="button" id="dropdownMenu2 validationServer01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    Select
+                                                                </button>
+                                                                <div class="dropdown-menu is-valid" aria-labelledby="dropdownMenu2">
+                                                                    <button class="dropdown-item" type="button">Select </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group col-md-6">
+                                                            <label for="validationServer01">Board</label>
+                                                            <div class="dropdown-valid  w-100 is-valid">
+                                                                <button class="btn dropdown-toggle btn-outline-secondary w-100 is is-valid" type="button" id="dropdownMenu2 validationServer01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    Select
+                                                                </button>
+                                                                <div class="dropdown-menu  w-100 is-valid" aria-labelledby="dropdownMenu2">
+                                                                    <button class="dropdown-item" type="button">Dhaka </button>
+                                                                    <button class="dropdown-item" type="button"> Rajshahi</button>
+                                                                    <button class="dropdown-item" type="button"> Comilla</button>
+                                                                    <button class="dropdown-item" type="button">Jessore </button>
+                                                                    <button class="dropdown-item" type="button">Chittagong </button>
+                                                                    <button class="dropdown-item" type="button">Barisal </button>
+                                                                    <button class="dropdown-item" type="button">Sylhet </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-row">
+                                                        <div class="form-group col-md-6">
+                                                            <label for="validationServer01">Exam/Degre Title</label>
+                                                            <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Bachelor Of Science (BSc)" required>
+                                                        </div>
+                                                        <div class="form-group col-md-6">
+                                                            <label for="validationServer01">Year Of Passing</label>
+                                                            <input type="text" class="form-control is-valid" id="validationServer01" placeholder="1986" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-row">
+                                                        <div class="form-group col-md-6">
+                                                            <label for="validationServer01">Concentration/Mejor/Group</label>
+                                                            <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Computer Science and Engineering" required>
+                                                        </div>
+                                                        <div class="form-group col-md-6">
+                                                            <label for="validationServer01">Duration</label>
+                                                            <div class="dropdown-valid w-50 is-valid">
+                                                                <button class="btn dropdown-toggle btn-outline-secondary  w-100 is is-valid" type="button" id="dropdownMenu2 validationServer01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    4 years
+                                                                </button>
+                                                                <div class="dropdown-menu is-valid" aria-labelledby="dropdownMenu2">
+                                                                    <button class="dropdown-item" type="button">4 Years </button>
+                                                                    <button class="dropdown-item" type="button"> 2 Years</button>
+                                                                    <button class="dropdown-item" type="button"> 1 Years</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-row">
+                                                        <div class="form-group col-md-6">
+                                                            <label for="validationServer01">Institute Name</label>
+                                                            <input type="Text" class="form-control is-valid" id="validationServer01" placeholder="Dhaka International University" required>
+                                                        </div>
+                                                        <div class="form-group col-md-6">
+                                                            <label for="validationServer01">Achievement</label>
+                                                            <textarea type="text" class="form-control line-1" id="validationServer01" placeholder="-"></textarea>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="">
+                                                        <span>
+                                                            <button type="submit" class="btn btn-secondary">EDIT</button>
+                                                            <button type="submit" class="btn btn-secondary">Delete</button>
+                                                        </span>
+                                                    </div>
+                                                    <div class="form-row mt-3">
+                                                        <div class="form-group col-md-6 mt-3">
+                                                            <h4>Academic 3</h4>
+                                                            <label for=" validationServer01">Label Of Education</label>
+                                                            <div class="dropdown is-valid">
+                                                                <button class="btn  dropdown-toggle btn-outline-secondary w-100 is-valid" type="button" id="dropdownMenu2 validationServer01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    Bachelor/Honors
+                                                                </button>
+                                                                <div class="dropdown-menu is-valid" aria-labelledby="dropdownMenu2">
+                                                                    <button class="dropdown-item" type="button">Secondery</button>
+                                                                    <button class="dropdown-item" type="button">Higher Secondary</button>
+                                                                    <button class="dropdown-item" type="button">Diploam</button>
+                                                                    <button class="dropdown-item" type="button">Bachelor/Honors </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group col-md-6 mt-5 ">
+                                                            <label for="validationServer01 is-valid">Result</label>
+                                                            <div class="dropdown is-valid">
+                                                                <button class="btn dropdown-toggle btn-outline-secondary w-100 is-valid" type="button" id="dropdownMenu2 validationServer01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    Select
+                                                                </button>
+                                                                <div class="dropdown-menu is-valid" aria-labelledby="dropdownMenu2">
+                                                                    <button class="dropdown-item" type="button">First Division</button>
+                                                                    <button class="dropdown-item" type="button">Second Division</button>
+                                                                    <button class="dropdown-item" type="button">Third Division</button>
+                                                                    <button class="dropdown-item" type="button">Greade </button>
+                                                                    <button class="dropdown-item" type="button">Appeared </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-row">
+                                                        <div class="form-group col-md-6">
+                                                            <label for="validationServer01">Exam/Degree</label>
+                                                            <div class="dropdown is-valid">
+                                                                <button class="btn dropdown-toggle btn-outline-secondary w-100 is-valid" type="button" id="dropdownMenu2 validationServer01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    Select
+                                                                </button>
+                                                                <div class="dropdown-menu is-valid" aria-labelledby="dropdownMenu2">
+                                                                    <button class="dropdown-item" type="button">Select </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group col-md-6">
+                                                            <label for="validationServer01">Board</label>
+                                                            <div class="dropdown-valid  w-100 is-valid">
+                                                                <button class="btn dropdown-toggle btn-outline-secondary w-100 is is-valid" type="button" id="dropdownMenu2 validationServer01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    Select
+                                                                </button>
+                                                                <div class="dropdown-menu  w-100 is-valid" aria-labelledby="dropdownMenu2">
+                                                                    <button class="dropdown-item" type="button">Dhaka </button>
+                                                                    <button class="dropdown-item" type="button"> Rajshahi</button>
+                                                                    <button class="dropdown-item" type="button"> Comilla</button>
+                                                                    <button class="dropdown-item" type="button">Jessore </button>
+                                                                    <button class="dropdown-item" type="button">Chittagong </button>
+                                                                    <button class="dropdown-item" type="button">Barisal </button>
+                                                                    <button class="dropdown-item" type="button">Sylhet </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-row">
+                                                        <div class="form-group col-md-6">
+                                                            <label for="validationServer01">Exam/Degre Title</label>
+                                                            <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Bachelor Of Science (BSc)" required>
+                                                        </div>
+                                                        <div class="form-group col-md-6">
+                                                            <label for="validationServer01">Year Of Passing</label>
+                                                            <input type="text" class="form-control is-valid" id="validationServer01" placeholder="1986" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-row">
+                                                        <div class="form-group col-md-6">
+                                                            <label for="validationServer01">Concentration/Mejor/Group</label>
+                                                            <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Computer Science and Engineering" required>
+                                                        </div>
+                                                        <div class="form-group col-md-6">
+                                                            <label for="validationServer01">Duration</label>
+                                                            <div class="dropdown-valid w-50 is-valid">
+                                                                <button class="btn dropdown-toggle btn-outline-secondary  w-100 is is-valid" type="button" id="dropdownMenu2 validationServer01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    4 years
+                                                                </button>
+                                                                <div class="dropdown-menu is-valid" aria-labelledby="dropdownMenu2">
+                                                                    <button class="dropdown-item" type="button">4 Years </button>
+                                                                    <button class="dropdown-item" type="button"> 2 Years</button>
+                                                                    <button class="dropdown-item" type="button"> 1 Years</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-row">
+                                                        <div class="form-group col-md-6">
+                                                            <label for="validationServer01">Institute Name</label>
+                                                            <input type="Text" class="form-control is-valid" id="validationServer01" placeholder="Dhaka International University" required>
+                                                        </div>
+                                                        <div class="form-group col-md-6">
+                                                            <label for="validationServer01">Achievement</label>
+                                                            <textarea type="text" class="form-control line-1" id="validationServer01" placeholder="-"></textarea>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="">
+                                                        <span>
+                                                            <button type="submit" class="btn btn-secondary">EDIT</button>
+                                                            <button type="submit" class="btn btn-secondary">Delete</button>
+                                                        </span>
+                                                    </div>--%>
+                                            </div>
+                                            <div class="col-md-3"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card m-3">
+                                    <div class="card-header" id="headingTwo">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                Training Summary</button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <div class="col-md-12">
+                                                    <div class="form-row">
+                                                        <div class="form-group col-md-6">
+                                                            <h4>Training 1</h4>
+                                                            <label for=" validationServer01">Training Title</label><br />
+                                                            <asp:TextBox ID="strTrainingTitle" runat="server" ReadOnly="True" CssClass="form-control"></asp:TextBox><br />
+                                                        </div>
+                                                        <div class="form-group col-md-6 mt-4">
+                                                            <label for="validationServer01 is-valid">Country</label><br />
+                                                            <asp:TextBox ID="strTxtCountry" runat="server" ReadOnly="True" CssClass="form-control"></asp:TextBox>
+                                                            <asp:DropDownList ID="strCountry" runat="server" Visible="False" Width="150px" CssClass="form-control">
+                                                            <asp:ListItem>Bangladesh</asp:ListItem>
+                                                            <asp:ListItem>India</asp:ListItem>
+                                                            <asp:ListItem>Pakistan</asp:ListItem>
+                                                            <asp:ListItem>Afganistan</asp:ListItem>
+                                                            <asp:ListItem>USA</asp:ListItem>
+                                                            <asp:ListItem>Canada</asp:ListItem>
+                                                            </asp:DropDownList><br />
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-row">
+                                                        <div class="form-group col-md-6 ">
+                                                            <label for=" validationServer01">Topics Covered</label><br />
+                                                            <asp:TextBox ID="strTopicsCovered" runat="server" ReadOnly="True" CssClass="form-control"></asp:TextBox><br />
+                                                        </div>
+                                                        <div class="form-group col-md-6 ">
+                                                            <label for="validationServer01 is-valid">Training Year</label><br />
+                                                            <asp:TextBox ID="strTrainingYear" runat="server" ReadOnly="True" CssClass="form-control"></asp:TextBox><br />
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-row">
+                                                        <div class="form-group col-md-6">
+                                                            <label for="validationServer01">Institute</label><br />
+                                                            <asp:TextBox ID="strInstitute" runat="server" ReadOnly="True" CssClass="form-control"></asp:TextBox><br />
+                                                        </div>
+                                                        <div class="form-group col-md-6">
+                                                            <label for="validationServer01">Duration</label><br />
+                                                            <asp:TextBox ID="strDurationTS" runat="server" ReadOnly="True" CssClass="form-control"></asp:TextBox><br />
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-row">
+                                                        <div class="form-group col-md-6">
+                                                            <label for="validationServer01">Location</label><br />
+                                                            <asp:TextBox ID="strLocation" runat="server" ReadOnly="True" CssClass="form-control"></asp:TextBox><br />
+                                                        </div>
+                                                    </div>
+                                                    <div class="">
+                                                        <span>
+                                                            <asp:Button ID="btnAddTS" runat="server" Text="Add" Visible="False" OnClick="btnAddTS_Click" /><br />
+                                                            <asp:Button ID="btnEditTS" runat="server" Text="Edit" OnClick="btnEditTS_Click" />
+                                                            <asp:Button ID="btnSaveTS" runat="server" Text="Save" Visible="False" />
+                                                            <asp:Button ID="btnDeleteTS" runat="server" Text="Delete" />
+                                                        </span>
+                                                    </div>
+                                                    <%--<div class="form-row mt-4">
+                                                        <div class="form-group col-md-6">
+                                                            <h4>Training 2</h4>
+                                                            <label for=" validationServer01">Training Title</label>
+                                                            <input type="text" class="form-control is-valid" id="validationServer01" placeholder="PMP" required>
+                                                        </div>
+                                                        <div class="form-group col-md-6 mt-4">
+                                                            <label for="validationServer01 is-valid">Country</label>
+                                                            <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Bangladesh" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-row">
+                                                        <div class="form-group col-md-6 ">
+                                                            <label for=" validationServer01">Topics Covered</label>
+                                                            <div class="dropdown w-100  is-valid">
+                                                                <button class="btn dropdown-toggle btn-outline-secondary w-100 is-valid" type="button" id="dropdownMenu2 validationServer01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    Select
+                                                                </button>
+                                                                <div class="dropdown-menu is-valid" aria-labelledby="dropdownMenu2">
+                                                                    <button class="dropdown-item" type="button">Project Management </button>
+                                                                    <button class="dropdown-item" type="button">Software Development </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group col-md-6 ">
+                                                            <label for="validationServer01 is-valid">Training Year</label>
+                                                            <input type="text" class="form-control is-valid" id="validationServer01" placeholder="2015" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-row">
+                                                        <div class="form-group col-md-6">
+                                                            <label for="validationServer01">Topics Covered</label>
+                                                            <div class="dropdown w-100  is-valid">
+                                                                <button class="btn dropdown-toggle btn-outline-secondary w-100 is-valid" type="button" id="dropdownMenu2 validationServer01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    Select
+                                                                </button>
+                                                                <div class="dropdown-menu is-valid" aria-labelledby="dropdownMenu2">
+                                                                    <button class="dropdown-item" type="button">Project Management </button>
+                                                                    <button class="dropdown-item" type="button">Software Development </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group col-md-6">
+                                                            <label for="validationServer01">Training Year</label>
+                                                            <input type="text" class="form-control is-valid" id="validationServer01" placeholder="2015" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-row">
+                                                        <div class="form-group col-md-6">
+                                                            <label for="validationServer01">Institute</label>
+                                                            <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Global Skills Development" required>
+                                                        </div>
+                                                        <div class="form-group col-md-6">
+                                                            <label for="validationServer01">Duration</label>
+                                                            <input type="text" class="form-control is-valid" id="validationServer01" placeholder="2 Weeks" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-row">
+                                                        <div class="form-group col-md-6">
+                                                            <label for="validationServer01">Location</label>
+                                                            <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Dhaka,Bangladesh" required>
+                                                        </div>
+                                                        <div class="form-group col-md-6">
+                                                            <label for="validationServer01">Duration</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="">
+                                                        <span>
+                                                            <button type="submit" class="btn btn-secondary">EDIT</button>
+                                                            <button type="submit" class="btn btn-secondary">Delete</button>
+                                                        </span>
+                                                    </div>
+                                                    <div class="form-row mt-4">
+                                                        <div class="form-group col-md-6">
+                                                            <h4>Training 3</h4>
+                                                            <label for=" validationServer01">Training Title</label>
+                                                            <input type="text" class="form-control is-valid" id="validationServer01" placeholder="PMP" required>
+                                                        </div>
+                                                        <div class="form-group col-md-6 mt-4">
+                                                            <label for="validationServer01 is-valid">Country</label>
+                                                            <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Bangladesh" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-row">
+                                                        <div class="form-group col-md-6 ">
+                                                            <label for=" validationServer01">Topics Covered</label>
+                                                            <div class="dropdown w-100  is-valid">
+                                                                <button class="btn dropdown-toggle btn-outline-secondary w-100 is-valid" type="button" id="dropdownMenu2 validationServer01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    Select
+                                                                </button>
+                                                                <div class="dropdown-menu is-valid" aria-labelledby="dropdownMenu2">
+                                                                    <button class="dropdown-item" type="button">Project Management </button>
+                                                                    <button class="dropdown-item" type="button">Software Development </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group col-md-6 ">
+                                                            <label for="validationServer01 is-valid">Training Year</label>
+                                                            <input type="text" class="form-control is-valid" id="validationServer01" placeholder="2015" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-row">
+                                                        <div class="form-group col-md-6">
+                                                            <label for="validationServer01">Topics Covered</label>
+                                                            <div class="dropdown w-100  is-valid">
+                                                                <button class="btn dropdown-toggle btn-outline-secondary w-100 is-valid" type="button" id="dropdownMenu2 validationServer01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    Select
+                                                                </button>
+                                                                <div class="dropdown-menu is-valid" aria-labelledby="dropdownMenu2">
+                                                                    <button class="dropdown-item" type="button">Project Management </button>
+                                                                    <button class="dropdown-item" type="button">Software Development </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group col-md-6">
+                                                            <label for="validationServer01">Training Year</label>
+                                                            <input type="text" class="form-control is-valid" id="validationServer01" placeholder="2015" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-row">
+                                                        <div class="form-group col-md-6">
+                                                            <label for="validationServer01">Institute</label>
+                                                            <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Global Skills Development" required>
+                                                        </div>
+                                                        <div class="form-group col-md-6">
+                                                            <label for="validationServer01">Duration</label>
+                                                            <input type="text" class="form-control is-valid" id="validationServer01" placeholder="2 Weeks" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-row">
+                                                        <div class="form-group col-md-6">
+                                                            <label for="validationServer01">Location</label>
+                                                            <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Dhaka,Bangladesh" required>
+                                                        </div>
+                                                        <div class="form-group col-md-6">
+                                                            <label for="validationServer01">Duration</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="">
+                                                        <span>
+                                                            <button type="submit" class="btn btn-secondary">EDIT</button>
+                                                            <button type="submit" class="btn btn-secondary">Delete</button>
+                                                        </span>
+                                                    </div>--%>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                <div class="card m-3">
+                                    <div class="card-header" id="headingThree">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                Professional Certification Summary</button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                        <div class="card-body p-4">
+                                            <center>
+                                                <p>Please click on the following button to add your professional qualification.</p>
+                                                <asp:FileUpload ID="imgCertificate" runat="server" /><br />
+                                                <asp:Button ID="btnAddCer" runat="server" Text="Add Certificate" class="btn btn-success" OnClick="btnAddCer_Click"/><br />
+                                            </center>  
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    
+                        <div class="tab-pane fade" id="nav-employment" role="tabpanel" aria-labelledby="nav-employment-tab">
+                            <div id="accordion">
+                                <div class="card m-3">
+                                    <div class="card-header" id="headingOne">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                Employment History</button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseOne" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <h4>Experience1</h4>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <label for="validationServer01">Company name</label><br />
+                                                    <asp:TextBox ID="strCompanyName" runat="server" ReadOnly="True" CssClass="form-control"></asp:TextBox><br />
+                                                </div>
+
+                                                <div class="form-group col-md-6">
+                                                    <label for="validationServer01">Responsibilities</label><br />
+                                                    <asp:TextBox ID="strResponsibilities" runat="server" cols="20" rows="3" TextMode="MultiLine" ReadOnly="True" CssClass="form-control"></asp:TextBox><br />
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <label for="validationServer01">Company Buisness</label><br />
+                                                    <asp:TextBox ID="strCompanyBusiness" runat="server" ReadOnly="True" CssClass="form-control"></asp:TextBox><br />
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <label for="validationServer01">Designations</label><br />
+                                                    <asp:TextBox ID="strDesignation" runat="server" ReadOnly="True" CssClass="form-control"></asp:TextBox><br />
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="validationServer01">Company Location</label><br />
+                                                    <asp:TextBox ID="strCompanyLocation" runat="server" ReadOnly="True" CssClass="form-control"></asp:TextBox><br />
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <label for="validationServer01">Department</label><br />
+                                                    <asp:TextBox ID="strDepartment" runat="server" ReadOnly="True" CssClass="form-control"></asp:TextBox><br />
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="validationServer01">Employment period</label><br />
+                                                    <asp:TextBox ID="strEmploymentPeriod" runat="server" ReadOnly="True" CssClass="form-control"></asp:TextBox><br />
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <label for="validationServer01">Area of Experience</label><br />
+                                                    <asp:TextBox ID="strAreaofExperiences" runat="server" ReadOnly="True" CssClass="form-control"></asp:TextBox><br />
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <div class="">
+                                                        <span>
+                                                            <asp:Button ID="btnAddEmp" runat="server" Text="Add" Visible="False" OnClick="btnAddEmp_Click" /><br />
+                                                            <asp:Button ID="btnEditEmp" runat="server" Text="Edit" OnClick="btnEditEmp_Click" />
+                                                            <asp:Button ID="btnSaveEmp" runat="server" Text="Save" Visible="False" />
+                                                            <asp:Button ID="btnDeleteEmp" runat="server" Text="Delete" />
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card m-3">
+                                <div class="card-header" id="headingOne">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne2" aria-expanded="true" aria-controls="collapseOne">
+                                            Employment History(For Retired Army Person)</button>
+                                    </h5>
+                                </div>
+                                <div id="collapseOne2" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <div class="card-body p-4">
+                                            <center>
+                                                <p>Please click on the following button to add your professional qualification.</p>
+                                                <asp:FileUpload ID="imgRAP" runat="server" /><br />
+                                                <asp:Button ID="btnAddRAP" runat="server" Text="Add Certificate" class="btn btn-success" OnClick="btnAddRAP_Click"/><br />
+                                            </center>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Photograph Section-->
+                        <div class="tab-pane fade" id="nav-photograph" role="tabpanel" aria-labelledby="nav-photograph-tab">
+                            <div id="accordion">
+                                <div class="card photobody">
+                                    <div class="imageupload panel panel-default">
+                                        <div class="panel-heading clearfix">
+                                            <h3 class="panel-title pull-left">Photography</h3>
+                                            <div class="btn-group pull-right">
+
+                                            </div>
+                                        </div>
+                                        <div class="file-tab panel-body">
+                                            <label class="btn btn-primary btn-file">
+                                                <span>upload</span>
+                                                <!-- The file is stored here. -->
+                                            <%--<input type="file" name="image-file">--%>
+                                                 <asp:FileUpload ID ="imageUpload" runat ="server" Width="354px" />
+                                            </label>
+                                            <button type="button" class="btn btn-danger">Delete image</button>
+                                            <button type="button" class="btn btn-danger">Change image</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="col-sm-2"></div>
+    </div>
+
+
+    <script>
+        $(document).ready(function(){
+        $("#collapseOne").on("hide.bs.collapse", function(){
+            $(".btn").html('<span class="glyphicon glyphicon-collapse-down"></span> Open');
+        });
+        $("#collapseOne").on("show.bs.collapse", function(){
+            $(".btn").html('<span class="glyphicon glyphicon-collapse-up"></span> Close');
+        });
+        });
+		
+
+    </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+
+</form>    
+</body>
+</html>
